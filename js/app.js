@@ -62,27 +62,27 @@ document.getElementById('prayerForm').addEventListener('submit', async function 
             'my-4 p-5 rounded-2xl border border-emerald-200 bg-emerald-50 text-emerald-800';
 
         statusDiv.innerHTML = `
-    <div class="text-center">
-        <div class="w-14 h-14 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center">
-            <i class="fas fa-check text-2xl text-emerald-600"></i>
-        </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-check text-2xl text-emerald-600"></i>
+                    </div>
 
-        <h3 class="text-lg font-bold text-emerald-800">
-            Prayer Request Submitted Successfully!
-        </h3>
+                    <h3 class="text-lg font-bold text-emerald-800">
+                        Prayer Request Submitted Successfully!
+                    </h3>
 
-        <p class="text-sm text-emerald-700 mt-2 mb-4">
-            Your prayer request has been received and forwarded to our prayer team.
-            We are standing with you in faith and believing God with you.
-        </p>
+                    <p class="text-sm text-emerald-700 mt-2 mb-4">
+                        Your prayer request has been received and forwarded to our prayer team.
+                        We are standing with you in faith and believing God with you.
+                    </p>
 
-        <a href="${whatsappUrl}"
-           target="_blank"
-           class="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-5 py-3 rounded-xl shadow hover:bg-emerald-700 transition">
-            <i class="fab fa-whatsapp"></i>
-            Continue on WhatsApp
-        </a>
-    </div>
+                    <a href="${whatsappUrl}"
+                    target="_blank"
+                    class="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-5 py-3 rounded-xl shadow hover:bg-emerald-700 transition">
+                        <i class="fab fa-whatsapp"></i>
+                        Continue on WhatsApp
+                    </a>
+                </div>
 `;
         document.getElementById('orderForm').reset();
     } else {

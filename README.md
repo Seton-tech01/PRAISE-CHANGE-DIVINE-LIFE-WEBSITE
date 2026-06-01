@@ -33,6 +33,12 @@ A modern, responsive church website developed for **Praise Change Divine Life Go
 └── README.md
 ```
 
+## 🌐 Live Demo
+
+Visit the live portfolio:
+
+[Church Website](https://praisechangelife.netlify.app/)
+
 ## 🚀 Getting Started
 
 ### Clone the Repository

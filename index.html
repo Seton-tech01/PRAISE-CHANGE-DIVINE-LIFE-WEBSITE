@@ -262,21 +262,22 @@
 
             <!-- Prayer Form -->
             <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/10">
+                
                 <form id="prayerForm" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-bold text-blue-950 uppercase tracking-wider mb-2" for="fullname">Your Full Name</label>
-                            <input type="text" id="fullname" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="John Doe">
+                            <input type="text" id="fullname" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="Enter your full name">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-blue-950 uppercase tracking-wider mb-2" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="08012345678">
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="Enter your phone number">
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-xs font-bold text-blue-950 uppercase tracking-wider mb-2" for="email">Email Address (Optional)</label>
-                        <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="john@example.com">
+                        <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50" placeholder="Enter your email address">
                     </div>
 
                     <div>
@@ -284,16 +285,11 @@
                         <textarea id="request" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition bg-slate-50 resize-none" placeholder="Write your prayer point details here..."></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-orange-500 cursor-pointer to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/20 transition duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-orange-500 cursor-pointer to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/20 transition duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
                         <i class="fas fa-paper-plane"></i> Send Request To Pastor
                     </button>
                 </form>
-
-                <!-- Dynamic submission alert template -->
-                <div id="successMessage" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl flex items-center gap-3">
-                    <div class="bg-emerald-500 text-white rounded-full p-2 w-8 h-8 flex items-center justify-center flex-shrink-0"><i class="fas fa-check text-sm"></i></div>
-                    <p class="text-sm font-medium">Hallelujah! Your prayer request has been delivered successfully to Pastor Emmanuel Gabriel. The ministry team will stand with you in faith.</p>
-                </div>
+                <div id="formStatus" class="hidden my-4 p-4 text-center rounded-xl font-medium"></div>                
             </div>
         </div>
     </section>
@@ -322,46 +318,7 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE FUNCTIONAL JAVASCRIPT -->
-    <script>
-        // Hamburger Mobile Navigation Menu Functionality
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+    <script src="js/app.js"></script>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // Toggle icons smoothly between bars and Close X symbol
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = 'fas fa-bars text-2xl';
-            } else {
-                menuIcon.className = 'fas fa-times text-2xl';
-            }
-        });
-
-        // Close mobile menu smoothly whenever a linking element section gets clicked
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = 'fas fa-bars text-2xl';
-            });
-        });
-
-        // Intercept Prayer Request Handling submission events
-        document.getElementById('prayerForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop page refreshing behavior
-            
-            // Show custom elegant system feedback response container alert box
-            const successBox = document.getElementById('successMessage');
-            successBox.classList.remove('hidden');
-            
-            // Reset input values within elements fields ready for standard recycling
-            this.reset();
-            
-            // Auto scroll container cleanly downwards to put user visibility onto feedback response notification box
-            successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-    </script>
 </body>
 </html>

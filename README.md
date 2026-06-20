@@ -1,6 +1,6 @@
 # Praise Change Divine Life Gospel Ministry Website
 
-A modern, responsive church website developed for **Praise Change Divine Life Gospel Ministry**. The website serves as an online presence for the ministry, providing visitors with information about church programs, leadership, branch locations, and prayer support.
+A modern, responsive church website developed for **Praise Change Divine Life Gospel Ministry**. The website serves as an online presence for the ministry, providing visitors with information about church programs, leadership, branch locations, and prayer support..
 
 ## ✨ Features
 
